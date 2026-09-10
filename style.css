@@ -18,7 +18,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 88px;
+    scroll-padding-top: var(--header-offset, 88px);
 }
 
 body {
@@ -306,7 +306,7 @@ section {
     border-radius: 22px;
     padding: 30px;
     margin-top: 18px;
-    animation: fade .25s ease
+    animation: fade .25s ease;
 }
 
 .topic.active {

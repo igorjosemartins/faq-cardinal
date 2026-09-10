@@ -271,6 +271,17 @@
   </footer>
 
   <script>
+    const header = document.querySelector('header');
+
+    function updateHeaderOffset() {
+      const offset = header.offsetHeight + 16;
+      document.documentElement.style.setProperty('--header-offset', offset + 'px');
+    }
+
+    updateHeaderOffset();
+    window.addEventListener('resize', updateHeaderOffset);
+    window.addEventListener('load', updateHeaderOffset);
+
     const cards = document.querySelectorAll('.card');
     const topics = document.querySelectorAll('.topic');
     cards.forEach(card => {
