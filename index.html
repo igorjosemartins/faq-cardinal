@@ -278,7 +278,7 @@
         topics.forEach(t => t.classList.remove('active'));
         const target = document.getElementById('topic-' + card.dataset.topic);
         target.classList.add('active');
-        target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
 
