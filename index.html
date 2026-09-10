@@ -271,6 +271,8 @@
   </footer>
 
   <script>
+    const isMobile = window.matchMedia('(max-width: 991px)').matches;
+
     const header = document.querySelector('header');
 
     function updateHeaderOffset() {
@@ -289,7 +291,8 @@
         topics.forEach(t => t.classList.remove('active'));
         const target = document.getElementById('topic-' + card.dataset.topic);
         target.classList.add('active');
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        updateHeaderOffset();
+        target.scrollIntoView({ behavior: 'smooth', block: (isMobile) ? 'start' : 'center' });
       });
     });
 
